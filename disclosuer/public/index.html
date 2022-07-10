@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/build/tailwind.css">
+</head>
+<body class="flex items-center justify-center h-screen bg-blue-700">
+<div class="flex flex-col w-full max-w-md p-4 bg-white rounded-xl gap-y-4">
+<!-- accordion #1 -->
+<div x-data="{selected: false}">
+    <!-- header -->
+<div @click="selected = !selected" class="flex items-center justify-between p-2 text-white bg-blue-600 rounded-lg cursor-pointer">
+    what is refund policy ?
+<span>
+    <svg  :class="selected ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-all duration-600" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+</span>
+</div>
+    <!-- content -->
+<div x-show="selected" class="px-4 pt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta animi deserunt temporibus ratione nisi tenetur quae voluptates? Aspernatur, aliquam vel!</div>
+</div>
+<!-- accordion #2 -->
+<div x-data="{selected2: false}">
+    <!-- header -->
+    <div  @click="selected2 = !selected2" class="flex items-center justify-between p-2 text-white bg-blue-600 rounded-lg cursor-pointer">
+        what is refund policy ?
+    <span>
+        <svg :class="selected2 ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-all duration-600" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+    </span>
+    </div>
+    <!-- content -->
+<div x-show="selected2" class="px-4 pt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta animi deserunt temporibus ratione nisi tenetur quae voluptates? Aspernatur, aliquam vel!</div>
+</div>
+</div>
+   <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
