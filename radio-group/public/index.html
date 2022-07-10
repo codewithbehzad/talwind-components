@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/build/tailwind.css">
+</head>
+<body class="flex flex-col items-center justify-center h-screen gap-4 bg-blue-700">
+<div 
+x-data="{
+    radio : 1 ,
+     activeClass : 'ring-4 ring-blue-300 bg-blue-400 text-white'
+    }"
+     class="flex flex-col w-full max-w-md gap-y-4">
+    <!-- #1 -->
+<div @click="radio = 1" :class="radio === 1 ? activeClass : '' " class="flex items-center justify-between p-4 bg-white cursor-pointer rounded-xl ">
+    <div>
+        <p class="mb-2 text-xl font-bold">Startup</p>
+        <span>126GB/6 . 160 GB SSD disk</span>
+    </div>
+    <!-- tick -->
+    <div x-show="radio === 1" class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+    </div>
+</div>
+<!-- #2 -->
+<div @click="radio = 2" :class="radio === 2 ? activeClass : '' " class="flex items-center justify-between p-4 bg-white cursor-pointer rounded-xl ">
+    <div>
+        <p class="mb-2 text-xl font-bold">Startup</p>
+        <span>126GB/6 . 160 GB SSD disk</span>
+    </div>
+     <!-- tick -->
+     <div x-show="radio === 2" class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+    </div>
+</div>
+
+<!-- #3 -->
+<div @click="radio = 3" :class="radio === 3 ? activeClass : '' " class="flex items-center justify-between p-4 bg-white cursor-pointer rounded-xl ">
+    <div>
+        <p class="mb-2 text-xl font-bold">Startup</p>
+        <span>126GB/6 . 160 GB SSD disk</span>
+    </div>
+    <!-- tick -->
+    <div x-show="radio === 3" class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+    </div>
+</div>
+
+</div>
+   <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
